@@ -1,0 +1,79 @@
+/* Woven Studio design system tokens, generated from ds/tokens.json. Do not edit by hand. */
+
+@font-face { font-family: "Albert Sans"; src: url("fonts/AlbertSans-Variable.ttf") format("truetype"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Federo"; src: url("fonts/Federo-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
+
+:root {
+  --primary: #1c2a44;
+  --primary-pressed: #131e33;
+  --primary-deep: #0d1626;
+  --on-primary: #ffffff;
+  --brand-navy: #11192b;
+  --brand-navy-deep: #0a101d;
+  --brand-navy-mid: #1f2d4a;
+  --brass: #b38b45;
+  --brass-deep: #7a5c22;
+  --on-brass: #16181d;
+  --oxblood: #7c2f3a;
+  --sage-deep: #2f5240;
+  --link-blue: #2f5d8a;
+  --link-blue-pressed: #23476b;
+  --card-tint-champagne: #f3e6cf;
+  --card-tint-blush: #f2dcd6;
+  --card-tint-sage: #dde6dc;
+  --card-tint-mist: #e3e1ea;
+  --card-tint-powder: #dbe4ec;
+  --card-tint-cream: #f6efdc;
+  --card-tint-brass: #ead6a8;
+  --card-tint-stone: #eee8dd;
+  --canvas: #fffdf8;
+  --surface: #f4eee2;
+  --surface-soft: #f9f5ec;
+  --hairline: #e6dccb;
+  --hairline-soft: #eee6d8;
+  --hairline-strong: #9c8f78;
+  --ink-deep: #0b0d12;
+  --ink: #16181d;
+  --charcoal: #2b2a28;
+  --slate: #5c574e;
+  --steel: #69645a;
+  --stone: #a39b8b;
+  --muted: #bdb3a2;
+  --on-dark: #ffffff;
+  --on-dark-muted: #b9b2a3;
+  --semantic-success: #2f6b4a;
+  --semantic-warning: #8a5a12;
+  --semantic-error: #a3262f;
+  --font-sans: "Albert Sans", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --font-sans-sc: "Albert Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-display: Federo, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-display-sc: Federo, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 20px;
+  --space-xl: 24px;
+  --space-xxl: 32px;
+  --space-xxxl: 40px;
+  --space-section-sm: 48px;
+  --space-section: 64px;
+  --space-section-lg: 96px;
+  --space-hero: 120px;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-xxl: 20px;
+  --radius-xxxl: 24px;
+  --radius-full: 9999px;
+  --elevation-1: 0px 1px 2px 0px rgba(15, 15, 15, 0.04);
+  --elevation-2: 0px 4px 12px 0px rgba(15, 15, 15, 0.08);
+  --elevation-3: 0px 24px 48px -8px rgba(15, 15, 15, 0.20);
+  --elevation-4: 0px 16px 48px -8px rgba(15, 15, 15, 0.16);
+  --bp-mobile-lg: 480px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+  --bp-wide: 1280px;
+}
