@@ -22,6 +22,11 @@ components where one exists: `.n-display` for Federo (tagline, nav wordmark, foo
 sections. Page-specific layout (the hero medallion, the showreel, the How we work diagram) is
 written in `index.html` on top of the tokens.
 
+Where the page departs from the design system (the oversized left-aligned tagline, the
+medallion behind it, Federo three times, the mark drawn and highlighted as a diagram, the navy
+nav and footer, the showreel's decorative colour, the photo cards), it does so under the approved
+marketing-page exceptions in HQ's ADR 0005 (`woven-studio/docs/decisions/0005-marketing-page-exceptions.md`).
+
 To update the system: copy the new `tokens.json`, `components/bundle.css` and `fonts/` from the
 artifact, drop the `@import` line from `bundle.css`, and regenerate `tokens.css`.
 
