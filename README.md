@@ -48,9 +48,13 @@ Then open <http://localhost:8000>.
 
 Colours and type follow the Woven Studio design system (`@woven-studio-london/tokens`).
 
+## Icons
+
+`favicon.svg` is the Crown in one ink (brand-navy, white in dark mode), as `docs/studio/brand.md` asks for favicons. `apple-touch-icon.png` (180 × 180) is the reversed Crown on brand-navy, for home-screen bookmarks.
+
 ## Still to fill
 
-- LinkedIn and X handles (footer, marked `[handle]`).
+- LinkedIn and X handles (footer, marked `[handle]`). Link them like Instagram: `target="_blank" rel="noopener noreferrer"`, so they open in a new tab.
 - The showreel video.
 - The three "In the studio" product cards.
 - JTBF's icon is copied from `woven-jtbf` branch `jtbf/app-icon`; update it here if it changes.

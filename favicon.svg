@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Woven Studio favicon: the Crown in one ink (brand.md: mono under 24px). brand-navy on light browser chrome, on-dark on dark. -->
+  <style>path { stroke: #11192b; } @media (prefers-color-scheme: dark) { path { stroke: #ffffff; } }</style>
+  <g fill="none" stroke-width="4" stroke-linecap="butt">
+    <path d="M8 4V26M8 34V44M16 22V44M24 12V26M24 34V44M32 22V44M40 4V26M40 34V44M2 30H12M20 30H28M36 30H46"/>
+  </g>
+</svg>
