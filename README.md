@@ -1,7 +1,34 @@
 # woven-site
 
-The Woven Studio landing page: a single self-contained page (`index.html`) plus four photos.
-No build step, no dependencies. Fonts (Albert Sans, Federo) load from Google Fonts.
+The Woven Studio landing page: one page (`index.html`), four photos and a vendored copy of the
+Woven Studio design system in `ds/`. No build step and no third-party requests: the fonts are
+self-hosted.
+
+## Design system
+
+`ds/` is the web layer of the Woven Studio design system, copied from the design system artifact
+(<https://claude.ai/artifact/VeEY75BVz6RjgBWxk3BX95>, version `1795530811-8da3`):
+
+| File | What it is |
+|---|---|
+| `ds/tokens.json` | The tokens, unchanged. |
+| `ds/tokens.css` | CSS custom properties and `@font-face` rules generated from `tokens.json`. Regenerate it, don't edit it. |
+| `ds/bundle.css` | The `n-` component classes, unchanged except that the Google Fonts `@import` is removed. |
+| `ds/fonts/` | Albert Sans (variable) and Federo, with their SIL OFL licences in `ds/licenses/`. |
+
+The page takes every colour, font, space and radius from these tokens, and uses the system's
+components where one exists: `.n-display` for Federo (tagline, nav wordmark, footer lockup),
+`.n-deco-rule`, `.n-mark` for the Crown, `.n-btn`, `.n-badge` and `.n-on-navy` on the navy
+sections. Page-specific layout (the hero medallion, the showreel, the How we work diagram) is
+written in `index.html` on top of the tokens.
+
+Where the page departs from the design system (the oversized left-aligned tagline, the
+medallion behind it, Federo three times, the mark drawn and highlighted as a diagram, the navy
+nav and footer, the showreel's decorative colour, the photo cards), it does so under the approved
+marketing-page exceptions in HQ's ADR 0005 (`woven-studio/docs/decisions/0005-marketing-page-exceptions.md`).
+
+To update the system: copy the new `tokens.json`, `components/bundle.css` and `fonts/` from the
+artifact, drop the `@import` line from `bundle.css`, and regenerate `tokens.css`.
 
 ## Preview
 
