@@ -54,7 +54,6 @@ Colours and type follow the Woven Studio design system (`@woven-studio-london/to
 
 ## Still to fill
 
-- LinkedIn and X handles (footer, marked `[handle]`). Link them like Instagram: `target="_blank" rel="noopener noreferrer"`, so they open in a new tab.
 - The showreel video.
 - The three "In the studio" product cards.
 - JTBF's icon is copied from `woven-jtbf` branch `jtbf/app-icon`; update it here if it changes.
