@@ -53,6 +53,7 @@ Colours and type follow the Woven Studio design system (`@woven-studio-london/to
 `jtbf/index.html` (English) and `jtbf/zh-hant/index.html` (Traditional Chinese) share `jtbf/jtbf.css` and
 `jtbf/waitlist.js`, and use the same `ds/` tokens and `n-` components as the studio page, under ADR 0005.
 Edit both pages together: the copy differs, the markup should not.
+When you change `jtbf.css` or `waitlist.js`, bump the `?v=` on their links in both pages so browsers fetch the new file.
 
 - **Waitlist:** a Kit (kit.com) form. Each page's form `action` holds the placeholder `KIT_FORM_ID`: replace it
   with the Kit form's ID in both files. A hidden `fields[language]` input (`en` or `zh-hant`) fills the Kit custom
