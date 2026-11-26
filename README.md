@@ -55,11 +55,11 @@ Colours and type follow the Woven Studio design system (`@woven-studio-london/to
 Edit both pages together: the copy differs, the markup should not.
 When you change `jtbf.css` or `waitlist.js`, bump the `?v=` on their links in both pages so browsers fetch the new file.
 
-- **Waitlist:** a Kit (kit.com) form. Both pages post to the Kit form "JTBF waitlist" (ID `10246510`,
-  double opt-in, bilingual confirmation email); the ID sits in each form's `action`. A hidden `fields[language]` input (`en` or `zh-hant`) fills the Kit custom
+- **Waitlist:** a Kit (kit.com) form. Each page posts to its own Kit form, so the confirmation email
+  arrives in the page's language: English to "JTBF waitlist" (ID `10246510`), Chinese to "JTBF waitlist (繁中)"
+  (ID `10247013`). Both use double opt-in, and the ID sits in each form's `action`. Change the emails in both forms. A hidden `fields[language]` input (`en` or `zh-hant`) fills the Kit custom
   field `language`. Without JavaScript the form posts straight to Kit; with it, `waitlist.js` submits in place,
   shows the thank-you (double opt-in: "check your inbox") and counts a GoatCounter event `jtbf-waitlist-signup`.
-  While the placeholder is in place, the form says the waitlist isn't open yet and sends nothing.
 - **Icon:** `jtbf/icon.svg` is `assets/icon.svg` from `woven-jtbf` (main); `apple-touch-icon.png` is its PNG at 180 px.
   `og.png` (1200 x 630) is rendered from the hero's motif and the icon.
 - **App screens:** `jtbf/shots/step-1..4.jpg`, real screens from the JTBF app on its sample roles (made-up companies),
