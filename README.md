@@ -48,6 +48,21 @@ Then open <http://localhost:8000>.
 
 Colours and type follow the Woven Studio design system (`@woven-studio-london/tokens`).
 
+## JTBF landing page
+
+`jtbf/index.html` (English) and `jtbf/zh-hant/index.html` (Traditional Chinese) share `jtbf/jtbf.css` and
+`jtbf/waitlist.js`, and use the same `ds/` tokens and `n-` components as the studio page, under ADR 0005.
+Edit both pages together: the copy differs, the markup should not.
+
+- **Waitlist:** a Kit (kit.com) form. Each page's form `action` holds the placeholder `KIT_FORM_ID`: replace it
+  with the Kit form's ID in both files. A hidden `fields[language]` input (`en` or `zh-hant`) fills the Kit custom
+  field `language`. Without JavaScript the form posts straight to Kit; with it, `waitlist.js` submits in place,
+  shows the thank-you (double opt-in: "check your inbox") and counts a GoatCounter event `jtbf-waitlist-signup`.
+  While the placeholder is in place, the form says the waitlist isn't open yet and sends nothing.
+- **Icon:** `jtbf/icon.svg` is `assets/icon.svg` from `woven-jtbf` (main); `apple-touch-icon.png` is its PNG at 180 px.
+  `og.png` (1200 x 630) is rendered from the hero's motif and the icon.
+- **Screenshots:** none yet. The spot for real simulator screenshots is marked in a comment in the How it works section.
+
 ## Icons
 
 `favicon.svg` is the Crown in one ink (brand-navy, white in dark mode), as `docs/studio/brand.md` asks for favicons. `apple-touch-icon.png` (180 × 180) is the reversed Crown on brand-navy, for home-screen bookmarks.
