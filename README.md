@@ -48,6 +48,26 @@ Then open <http://localhost:8000>.
 
 Colours and type follow the Woven Studio design system (`@woven-studio-london/tokens`).
 
+## JTBF landing page
+
+`jtbf/index.html` (English) and `jtbf/zh-hant/index.html` (Traditional Chinese) share `jtbf/jtbf.css` and
+`jtbf/waitlist.js`, and use the same `ds/` tokens and `n-` components as the studio page, under ADR 0005.
+Edit both pages together: the copy differs, the markup should not.
+When you change `jtbf.css` or `waitlist.js`, bump the `?v=` on their links in both pages so browsers fetch the new file.
+
+- **Waitlist:** a Kit (kit.com) form. Each page posts to its own Kit form, so the confirmation email
+  arrives in the page's language: English to "JTBF waitlist" (ID `10246510`), Chinese to "JTBF waitlist (繁中)"
+  (ID `10247013`). Both use double opt-in, and the ID sits in each form's `action`. Change the emails in both forms. A hidden `fields[language]` input (`en` or `zh-hant`) fills the Kit custom
+  field `language`. Without JavaScript the form posts straight to Kit; with it, `waitlist.js` submits in place,
+  shows the thank-you (double opt-in: "check your inbox") and counts a GoatCounter event `jtbf-waitlist-signup`.
+- **Icon:** `jtbf/icon.svg` is `assets/icon.svg` from `woven-jtbf` (main); `apple-touch-icon.png` is its PNG at 180 px.
+  `og.png` (1200 x 630) is rendered from the hero's motif and the icon.
+- **App screens:** `jtbf/shots/step-1..4.jpg`, real screens from the JTBF app on its sample roles (made-up companies),
+  taken on a simulator and cropped below the status bar to 540 px wide. Both pages use the English screens for
+  now; when the app has a Traditional Chinese version, take Chinese screens for `zh-hant` (Morris, 2026-11-26).
+- **Before launch:** no prices and no exact launch date in public: "January 2027" / 「2027 年 1 月」 (Morris, 2026-11-26).
+- **Screenshots:** none yet. The spot for real simulator screenshots is marked in a comment in the How it works section.
+
 ## Icons
 
 `favicon.svg` is the Crown in one ink (brand-navy, white in dark mode), as `docs/studio/brand.md` asks for favicons. `apple-touch-icon.png` (180 × 180) is the reversed Crown on brand-navy, for home-screen bookmarks.
