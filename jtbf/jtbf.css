@@ -151,7 +151,7 @@ a { color: inherit; }
 .where { margin: 8px 0 0; }
 
 /* pricing */
-.plans { display: grid; gap: 16px; max-width: 880px; }
+.plans { display: grid; gap: 16px; }
 @media (min-width: 760px) { .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .n-price-card ul { padding-left: 0; list-style: none; display: grid; gap: 10px; font-size: 15px; }
 .n-price-card li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; }
