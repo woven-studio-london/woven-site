@@ -209,3 +209,13 @@ a { color: inherit; }
 /* Chinese headings: break at punctuation rather than mid-phrase where the line allows it. */
 :lang(zh) :is(.promise, .section-head h2, .foot h2) { word-break: keep-all; overflow-wrap: anywhere; }
 :lang(zh) .foot h2 { font-size: clamp(28px, 5vw, 56px); }
+
+/* real app screens (sample data), one per step */
+.shot { grid-column: 2; margin: 16px 0 0; max-width: 240px; }
+.shot img { display: block; width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--hairline-strong); background: var(--canvas); }
+.shots-note { margin: 8px 0 0; font-size: 14px; line-height: 20px; color: var(--steel); }
+@media (min-width: 900px) {
+  .step { grid-template-rows: auto auto 1fr auto; align-content: stretch; }
+  .shot { grid-column: auto; margin: 8px 0 0; max-width: none; align-self: end; }
+  .shots-note { margin-top: 24px; }
+}
