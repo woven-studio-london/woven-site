@@ -1,8 +1,8 @@
 # woven-site
 
-The Woven Studio landing page: one page (`index.html`), four photos and a vendored copy of the
-Woven Studio design system in `ds/`. No build step and no third-party requests: the fonts are
-self-hosted.
+The Woven Studio landing page, in English (`index.html`) and Traditional Chinese (`zh-hant/index.html`),
+four photos and a vendored copy of the Woven Studio design system in `ds/`. No build step and no
+third-party requests: the fonts are self-hosted.
 
 ## Design system
 
@@ -20,7 +20,7 @@ The page takes every colour, font, space and radius from these tokens, and uses 
 components where one exists: `.n-display` for Federo (tagline, nav wordmark, footer lockup),
 `.n-deco-rule`, `.n-mark` for the Crown, `.n-btn`, `.n-badge` and `.n-on-navy` on the navy
 sections. Page-specific layout (the hero medallion, the showreel, the How we work diagram) is
-written in `index.html` on top of the tokens.
+written in `studio.css` on top of the tokens.
 
 Where the page departs from the design system (the oversized left-aligned tagline, the
 medallion behind it, Federo three times, the mark drawn and highlighted as a diagram, the navy
@@ -37,6 +37,20 @@ python3 -m http.server 8000
 ```
 
 Then open <http://localhost:8000>.
+
+## Languages
+
+`index.html` (English) and `zh-hant/index.html` (Traditional Chinese, for readers in Hong Kong and Taiwan) share
+`studio.css` and `studio.js`. Edit both pages together: the copy differs, the markup should not. The script's
+words (Copy, Copied, the GoatCounter opt-out) sit in `data-` attributes on each page, so the script carries no copy.
+When you change `studio.css` or `studio.js`, bump the `?v=` on their links in both pages.
+
+- **Switch:** EN / 繁中 in the nav, as on the JTBF pages; each page links the other with `hreflang`
+  (`en-GB`, `zh-Hant`, and `x-default` pointing at English).
+- **Chinese type:** Federo has no Chinese glyphs, so the Federo headings fall back through `--font-display` to Noto Sans TC,
+  PingFang TC or Microsoft JhengHei. `studio.css` sets the Chinese big type a step smaller under `:lang(zh)`.
+- **Copy:** written in Chinese rather than translated, in neutral vocabulary that reads naturally in both places,
+  with 「」 quotes (HQ `docs/studio/marketing.md`, "Audiences and languages").
 
 ## Sections
 
