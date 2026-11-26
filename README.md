@@ -61,6 +61,10 @@ Edit both pages together: the copy differs, the markup should not.
   While the placeholder is in place, the form says the waitlist isn't open yet and sends nothing.
 - **Icon:** `jtbf/icon.svg` is `assets/icon.svg` from `woven-jtbf` (main); `apple-touch-icon.png` is its PNG at 180 px.
   `og.png` (1200 x 630) is rendered from the hero's motif and the icon.
+- **App screens:** `jtbf/shots/step-1..4.jpg`, real screens from the JTBF app on its sample roles (made-up companies),
+  taken on a simulator and cropped below the status bar to 540 px wide. Both pages use the English screens for
+  now; when the app has a Traditional Chinese version, take Chinese screens for `zh-hant` (Morris, 2026-11-26).
+- **Before launch:** no prices and no exact launch date in public: "January 2027" / 「2027 年 1 月」 (Morris, 2026-11-26).
 - **Screenshots:** none yet. The spot for real simulator screenshots is marked in a comment in the How it works section.
 
 ## Icons
