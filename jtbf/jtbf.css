@@ -132,7 +132,7 @@ a { color: inherit; }
 .step h3 span { display: block; font-size: 11px; line-height: 15px; letter-spacing: 1px; font-weight: 600; text-transform: uppercase; color: var(--steel); }
 .step p { margin: 0; color: var(--slate); text-wrap: pretty; }
 @media (min-width: 900px) {
-  .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+  .steps { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; }
   .step { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 0; }
   .step-ico { grid-row: auto; }
   .step::before { left: 64px; right: -24px; top: 23px; bottom: auto; width: auto; height: 2px; }
@@ -234,3 +234,7 @@ a { color: inherit; }
   .motif .glint { display: none; }
   .motif .rays path { animation: none; }
 }
+
+/* how it works alternates JTBF's steps and yours: yours are brass, so the decisions stand out */
+.step.is-you .step-ico { background: var(--brass); color: var(--brand-navy); }
+.step.is-you h3 span { color: var(--brass-deep); }
