@@ -39,7 +39,7 @@ a { color: inherit; }
 
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
 .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; min-height: 48px; }
-.nav-icon { width: 28px; height: 28px; flex: none; border-radius: 7px; box-shadow: 0 0 0 1px rgba(179, 139, 69, 0.45); }
+.nav-icon { width: 28px; height: 28px; flex: none; border-radius: 7px; }
 .nav-brand span { font-family: var(--font-display); font-size: 19px; line-height: 24px; }
 .lang { display: flex; align-items: center; gap: 2px; font-size: 14px; font-weight: 500; }
 .lang a, .lang span { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: var(--radius-md); text-decoration: none; color: var(--on-dark-muted); }
@@ -132,7 +132,7 @@ a { color: inherit; }
 .step h3 span { display: block; font-size: 11px; line-height: 15px; letter-spacing: 1px; font-weight: 600; text-transform: uppercase; color: var(--steel); }
 .step p { margin: 0; color: var(--slate); text-wrap: pretty; }
 @media (min-width: 900px) {
-  .steps { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; }
+  .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
   .step { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 0; }
   .step-ico { grid-row: auto; }
   .step::before { left: 64px; right: -24px; top: 23px; bottom: auto; width: auto; height: 2px; }
