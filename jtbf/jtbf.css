@@ -195,6 +195,15 @@ a { color: inherit; }
 .lockup small { font-size: 13px; color: var(--on-dark-muted); }
 .signoff-meta { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; line-height: 18px; color: var(--on-dark-muted); }
 .signoff-meta a { color: var(--on-dark); text-underline-offset: 3px; }
+.foot-contact { display: grid; gap: 10px; justify-items: start; }
+.foot-label { margin: 0; font-size: 11px; line-height: 15px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--on-dark-muted); }
+.foot-email { font-size: 17px; line-height: 24px; color: var(--on-dark); text-underline-offset: 4px; overflow-wrap: anywhere; }
+.foot-email:hover { color: var(--brass); }
+.foot-socials { list-style: none; margin: 0 0 0 -11px; padding: 0; display: flex; gap: 4px; }
+.foot-socials a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: var(--radius-md); }
+.foot-socials svg { width: 22px; height: 22px; fill: none; stroke: var(--brass); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.foot-socials a:hover svg { stroke: var(--on-dark); }
+.foot-socials a:focus-visible { outline: 2px solid var(--on-dark); outline-offset: 2px; }
 .privacy-note { margin: 0; flex-basis: 100%; font-size: 13px; line-height: 19px; color: var(--on-dark-muted); }
 .privacy-note a { color: inherit; }
 .privacy-note button { font: inherit; color: inherit; background: none; border: 0; padding: 0; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
