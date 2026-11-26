@@ -235,7 +235,3 @@ a { color: inherit; }
   .motif .glint { display: none; }
   .motif .rays path { animation: none; }
 }
-
-/* how it works alternates JTBF's steps and yours: yours are brass, so the decisions stand out */
-.step.is-you .step-ico { background: var(--brass); color: var(--brand-navy); }
-.step.is-you h3 span { color: var(--brass-deep); }
