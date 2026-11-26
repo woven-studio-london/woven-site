@@ -55,8 +55,8 @@ Colours and type follow the Woven Studio design system (`@woven-studio-london/to
 Edit both pages together: the copy differs, the markup should not.
 When you change `jtbf.css` or `waitlist.js`, bump the `?v=` on their links in both pages so browsers fetch the new file.
 
-- **Waitlist:** a Kit (kit.com) form. Each page's form `action` holds the placeholder `KIT_FORM_ID`: replace it
-  with the Kit form's ID in both files. A hidden `fields[language]` input (`en` or `zh-hant`) fills the Kit custom
+- **Waitlist:** a Kit (kit.com) form. Both pages post to the Kit form "JTBF waitlist" (ID `10246510`,
+  double opt-in, bilingual confirmation email); the ID sits in each form's `action`. A hidden `fields[language]` input (`en` or `zh-hant`) fills the Kit custom
   field `language`. Without JavaScript the form posts straight to Kit; with it, `waitlist.js` submits in place,
   shows the thank-you (double opt-in: "check your inbox") and counts a GoatCounter event `jtbf-waitlist-signup`.
   While the placeholder is in place, the form says the waitlist isn't open yet and sends nothing.
