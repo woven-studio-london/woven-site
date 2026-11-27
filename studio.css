@@ -266,6 +266,14 @@ a { color: inherit; }
 .product-name .icon--empty { border: 1px dashed var(--hairline-strong); }
 .product p { margin: 0; color: var(--slate); text-wrap: pretty; }
 .product--soon h3 { color: var(--slate); }
+/* one product on the loom: a single wide card, photo beside the text from tablet up */
+.products--single { grid-template-columns: minmax(0, 1fr) !important; }
+@media (min-width: 720px) {
+  .products--single .product { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "photo name" "photo text"; column-gap: 48px; row-gap: 16px; align-content: center; max-width: 1040px; }
+  .products--single .photo { grid-area: photo; align-self: center; }
+  .products--single .product-name { grid-area: name; align-self: end; }
+  .products--single .product > p { grid-area: text; align-self: start; font-size: 18px; line-height: 28px; max-width: 30em; }
+}
 .product-name h3 a { text-underline-offset: 4px; text-decoration-thickness: 1px; }
 .product-name h3 a:hover { color: var(--brass-deep); }
 @media (prefers-reduced-motion: reduce) { .photo img { transition: none; } .product:hover .photo img { transform: none; } }
