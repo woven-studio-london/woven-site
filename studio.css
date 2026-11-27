@@ -75,7 +75,8 @@ a { color: inherit; }
 .nav-links { display: flex; gap: 28px; font-size: 14px; font-weight: 500; }
 .nav-links a { text-decoration: none; color: var(--on-dark-muted); padding: 12px 0; }
 .nav-links a:hover { color: var(--on-dark); }
-@media (max-width: 440px) { .nav-links a:nth-child(2) { display: none; } }
+/* phones: only the brand and the language switch */
+@media (max-width: 719px) { .nav-links { display: none; } }
 
 .hero-body { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 28px; padding-block: 24px 36px; }
 .hero .eyebrow { color: var(--on-dark-muted); display: flex; align-items: center; gap: 14px; }
@@ -212,16 +213,6 @@ a { color: inherit; }
     linear-gradient(to top, rgba(10, 16, 29, 0.96) 0%, rgba(10, 16, 29, 0.88) 30%, rgba(10, 16, 29, 0.45) 58%, rgba(10, 16, 29, 0) 80%),
     linear-gradient(to right, rgba(10, 16, 29, 0.55) 0%, rgba(10, 16, 29, 0) 60%);
 }
-.reel-badge {
-  position: absolute; z-index: 2; top: max(32px, 6vh); right: max(16px, 4vw);
-  display: inline-flex; align-items: center; gap: 12px;
-  padding: 8px 16px 8px 8px; border-radius: 999px;
-  background: rgba(10, 16, 29, 0.72); border: 1px solid rgba(185, 178, 163, 0.35);
-  font-size: 13px; line-height: 18px; font-weight: 500; color: var(--on-dark);
-}
-.reel-badge i { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(179, 139, 69, 0.8); display: grid; place-items: center; }
-.reel-badge svg { width: 12px; height: 12px; fill: var(--brass); margin-left: 2px; }
-.reel-badge small { font-size: 13px; color: var(--on-dark-muted); }
 
 .reel-text { position: relative; z-index: 2; width: 100%; padding-block: 120px max(56px, 9vh); }
 @media (min-width: 720px) { .reel-text { max-width: none; padding-left: max(32px, 4vw, env(safe-area-inset-left, 0px)); padding-right: max(32px, 4vw, env(safe-area-inset-right, 0px)); } }
@@ -241,9 +232,9 @@ a { color: inherit; }
    warm grade so the four read as one set. Name and a two-line summary sit beneath. */
 .band-parchment { background: var(--surface); }
 /* founder: a square portrait beside a short bio; stacked on phones */
-.founder-grid { display: grid; gap: 32px; align-items: center; }
-@media (min-width: 720px) { .founder-grid { grid-template-columns: minmax(220px, 360px) 1fr; gap: 56px; } }
-.founder-photo { margin: 0; aspect-ratio: 1 / 1; border-radius: var(--radius-lg); overflow: hidden; background: var(--brand-navy); max-width: 360px; }
+.founder-grid { display: grid; gap: 24px; align-items: center; }
+@media (min-width: 720px) { .founder-grid { grid-template-columns: 200px 1fr; gap: 48px; } }
+.founder-photo { margin: 0; aspect-ratio: 1 / 1; border-radius: var(--radius-lg); overflow: hidden; background: var(--brand-navy); max-width: 200px; }
 .founder-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .founder-text { display: grid; gap: 12px; max-width: 36em; }
 .founder-text h2 { font-size: clamp(28px, 4.4vw, 36px); line-height: 1.2; font-weight: 600; letter-spacing: -0.5px; margin: 0; text-wrap: balance; }
@@ -275,6 +266,14 @@ a { color: inherit; }
 .product-name .icon--empty { border: 1px dashed var(--hairline-strong); }
 .product p { margin: 0; color: var(--slate); text-wrap: pretty; }
 .product--soon h3 { color: var(--slate); }
+/* one product on the loom: a single wide card, photo beside the text from tablet up */
+.products--single { grid-template-columns: minmax(0, 1fr) !important; }
+@media (min-width: 720px) {
+  .products--single .product { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "photo name" "photo text"; column-gap: 48px; row-gap: 16px; align-content: center; max-width: 1040px; }
+  .products--single .photo { grid-area: photo; align-self: center; }
+  .products--single .product-name { grid-area: name; align-self: end; }
+  .products--single .product > p { grid-area: text; align-self: start; font-size: 18px; line-height: 28px; max-width: 30em; }
+}
 .product-name h3 a { text-underline-offset: 4px; text-decoration-thickness: 1px; }
 .product-name h3 a:hover { color: var(--brass-deep); }
 @media (prefers-reduced-motion: reduce) { .photo img { transition: none; } .product:hover .photo img { transform: none; } }
