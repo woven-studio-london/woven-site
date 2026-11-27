@@ -240,6 +240,15 @@ a { color: inherit; }
    Each card leads with a real photograph of the moment the product is used, given a light
    warm grade so the four read as one set. Name and a two-line summary sit beneath. */
 .band-parchment { background: var(--surface); }
+/* founder: a square portrait beside a short bio; stacked on phones */
+.founder-grid { display: grid; gap: 32px; align-items: center; }
+@media (min-width: 720px) { .founder-grid { grid-template-columns: minmax(220px, 360px) 1fr; gap: 56px; } }
+.founder-photo { margin: 0; aspect-ratio: 1 / 1; border-radius: var(--radius-lg); overflow: hidden; background: var(--brand-navy); max-width: 360px; }
+.founder-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.founder-text { display: grid; gap: 12px; max-width: 36em; }
+.founder-text h2 { font-size: clamp(28px, 4.4vw, 36px); line-height: 1.2; font-weight: 600; letter-spacing: -0.5px; margin: 0; text-wrap: balance; }
+.founder-text p { margin: 0; font-size: 18px; line-height: 28px; color: var(--slate); text-wrap: pretty; }
+.founder-text .founder-name { font-size: 15px; line-height: 22px; font-weight: 600; color: var(--ink); padding-top: 8px; border-top: 1px solid var(--brass-deep); width: fit-content; }
 .products { display: grid; gap: 32px 20px; grid-template-columns: minmax(0, 1fr); }
 @media (min-width: 640px) { .products { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 1000px) { .products { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
